@@ -12,7 +12,7 @@ import androidx.core.content.PermissionChecker.PERMISSION_GRANTED
 
 class MainActivity : AppCompatActivity() {
     lateinit var amb : ActivityMainBinding
-    lateinit var tel : String
+    var tel : String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
