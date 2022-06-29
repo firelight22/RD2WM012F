@@ -6,6 +6,7 @@ import androidx.room.PrimaryKey
 @Entity
 data class Ville(@PrimaryKey(autoGenerate = true)var id:Long = 0L,
                  var population: Int = 0,
+                 var nom: String = "oui",
                  val moyenneAge:Int = 50,
                  val dateCreation:Int = 1000) {
 }
