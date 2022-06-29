@@ -45,7 +45,8 @@
             android:clickable="true"
             app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/ic_baseline_remove_24" />
+            app:srcCompat="@drawable/ic_baseline_remove_24"
+            android:contentDescription="Décrémenter" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

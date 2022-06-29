@@ -19,12 +19,12 @@
             android:id="@+id/textViewVille"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:text="@{vm.ville}"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+            tools:text="@tools:sample/cities" />
 
         <TextView
             android:id="@+id/textViewTemperature"
@@ -37,7 +37,8 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewVille" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewVille"
+            tools:text="@tools:sample/lorem" />
 
         <TextView
             android:id="@+id/textViewTemps"
@@ -47,30 +48,56 @@
             android:text="@{vm.temps}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTemperature" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewTemperature"
+            tools:text="@tools:sample/lorem" />
 
         <TextView
             android:id="@+id/textViewVent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{String.valueOf(vm.vitesseVent) + `km/h`}"
             android:layout_marginTop="64dp"
+            android:text="@{String.valueOf(vm.vitesseVent) + `km/h`}"
 
             app:layout_constraintEnd_toStartOf="@+id/textViewCoucherSoleil"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTemps" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewTemps"
+            tools:text="@tools:sample/us_phones" />
 
         <TextView
             android:id="@+id/textViewCoucherSoleil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{vm.coucherSoleilHM()}"
             android:layout_marginTop="64dp"
+            android:text="@{vm.coucherSoleilHM()}"
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/textViewVent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTemps" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewTemps"
+            tools:text="@tools:sample/date/hhmm" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            app:layout_constraintEnd_toStartOf="@+id/button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
