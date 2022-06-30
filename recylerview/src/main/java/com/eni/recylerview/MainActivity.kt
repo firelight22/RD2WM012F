@@ -4,27 +4,12 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import io.github.serpro69.kfaker.faker
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val arrayListVoiture = ArrayList<Voiture>
-        arrayListVoiture.add(Voiture("Tesla","Model S","EL",105000,500))
-        arrayListVoiture.add(Voiture("Tesla","Model 3","EL",50000,250))
-        arrayListVoiture.add(Voiture("Tesla","Model Y","EL",60000,250))
-        arrayListVoiture.add(Voiture("Hyundai","Ioniq","EL",15000,250))
-        arrayListVoiture.add(Voiture("Hyundai","Ioniq 6","EL",50000,350))
-        val fake = faker { }
-        for (i in 1..500) {
-            var marque = fake.vehicle.makes()
-            var modele = fake.vehicle.modelsByMake(marque)
-            var fuel = fake.vehicle.fuelTypes()
-            var puissance = fake.vehicle.cylinderEngine()
-            var prix = (7000..150000).random()
-            arrayListVoiture.add(Voiture(marque,modele,fuel,prix,puissance))
-        }
+
 
         val listVille = arrayListOf<Ville>(
             Ville(300000,"Rennes",45,-500),
