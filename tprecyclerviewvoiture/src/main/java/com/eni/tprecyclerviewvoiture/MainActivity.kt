@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         val rvVoiture = findViewById<RecyclerView>(R.id.recyclerViewVoiture)
         val adapter = VoitureAdapter(arrayListVoiture, VoitureAdapter.OnVoitureClickListener {
             Toast.makeText(this, it.modele, Toast.LENGTH_SHORT).show()
+
+
         })
         rvVoiture.layoutManager = LinearLayoutManager(this)
         rvVoiture.adapter = adapter
