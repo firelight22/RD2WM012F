@@ -24,6 +24,7 @@ class VilleAdapter(val listville : ArrayList<Ville>) :
         holder.binding.ville = listville.get(position)
         holder.itemView.setOnClickListener {
             Log.i("VilleAdapter", "onBindViewHolder: " + "element clické")
+
         }
         //holder.itemView.setOnClickListener {
         //    Toast.makeText(holder.itemView.context, villeAAfficher.nom, Toast.LENGTH_SHORT).show()
